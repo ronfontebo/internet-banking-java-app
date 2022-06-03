@@ -1,10 +1,12 @@
 
-// jenkins declarative pipeline script for beers-of-the-world-java-webapp
-//=======================================================================
+// jenkins declarative pipeline script for internet-banking-java-app
+//==================================================================
 
 
 pipeline {
-  agent any
+  agent { 
+    label "maven"
+  }
   tools {
     maven "maven"
   }
