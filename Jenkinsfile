@@ -20,7 +20,7 @@ pipeline {
         sh "echo cloning the lastest code version"
         git branch: 'main', 
         credentialsId: 'git-token', 
-        url: 'https://github.com/ronfontebo/${PROJECT_ID}'
+        url: 'https://github.com/ronfontebo/internet-banking-java-app'
         sh "echo clonning successful"
       }
     }
