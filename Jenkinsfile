@@ -29,7 +29,7 @@ pipeline {
       steps {
         sh "echo validation, compilation, testing and packaging"
         sh "echo testing successful and ready to package"
-        sh "mvn clean package"        
+        sh "mvn clean package -U"        
       }
     }
 

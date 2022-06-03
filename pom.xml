@@ -4,6 +4,18 @@
   <artifactId>internet-banking-java-app</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
+  <build>
+    <sourceDirectory>src</sourceDirectory>
+    <plugins>
+      <plugin>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>3.2.3</version>
+        <configuration>
+          <warSourceDirectory>WebContent</warSourceDirectory>
+        </configuration>
+      </plugin> 
+    </plugins>
+  </build>
   <dependencies>
     <dependency>
       <groupId>com.google.code.jcouchdb</groupId>
