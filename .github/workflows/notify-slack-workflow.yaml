@@ -1,0 +1,28 @@
+# Github action workflow to notify the project's slack channel when code is pulled by jenkins server
+#===================================================================================================
+# Steps:
+#=======
+# Define runner virtual machine
+# Notify slack channel 
+#---------------------------------------------------------------------
+
+name: Notify slack channel
+
+on: push
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:  
+      - uses: ravsamhq/notify-slack-action@v1
+        if: always()
+        with:
+          status: ${{ job.status }} # required
+          notification_title: 'New "Pull by jenkins server" Run'
+          message_format: '{emoji} *{workflow}* {status_message} in <{repo_url}|{repo}>'
+          footer: 'Linked Repo <{repo_url}|{repo}>'
+          notify_when: 'success,failure,warnings'            
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }} 
+
+#-------------------------------------------------------------------------------------------------------
