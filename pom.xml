@@ -28,7 +28,7 @@
     </dependency>
   </dependencies>
   <properties>
-      <sonar.host.url>http://18.118.168.91:9000</sonar.host.url>
+      <sonar.host.url>http://18.221.213.211:9000</sonar.host.url>
       <sonar.login>admin</sonar.login>
       <sonar.password>admin</sonar.password>
   </properties>
@@ -36,12 +36,12 @@
     <repository>
       <id>nexus</id> 
       <name>Releases</name>
-      <url>http://18.188.106.16:8081/repository/maven-releases/</url>
+      <url>http://3.15.224.239:8081/repository/maven-releases/</url>
     </repository>
     <snapshotRepository>
       <id>nexus</id>
       <name>Snapshot</name>
-      <url>http://18.188.106.16:8081/repository/maven-snapshots/</url>
+      <url>http://3.15.224.239:8081/repository/maven-snapshots/</url>
     </snapshotRepository>
   </distributionManagement>
 </project>
